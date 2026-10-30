@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nandha Kumar | Full Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Nandha Kumar - Full Stack Developer specializing in Python, React, and MySQL. B.E. CSE student with CGPA 8.9." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Particle Background -->
+  <div class="particles" id="particles"></div>
+
+  <!-- Header -->
+  <header id="mainHeader">
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="brand-avatar">
+            <img src="pokecutweb_1793371880162.jpg" alt="Nandha Kumar" class="brand-photo" />
+          </div>
+          <span class="brand-name">Nandha Kumar</span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#training" class="nav-link">Training</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-right">
+          <button id="themeToggle" class="theme-btn" aria-label="Toggle dark mode">
+            <span id="themeIcon">☀️</span>
+          </button>
+          <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+      <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+      <li><a href="#education" onclick="closeMobileMenu()">Education</a></li>
+      <li><a href="#training" onclick="closeMobileMenu()">Training</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Left: Text Content -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              <span>Available for opportunities</span>
+            </div>
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Nandha Kumar</span>
+            </h1>
+            <div class="hero-role-wrap">
+              <span class="hero-role-label">Full Stack Developer</span>
+            </div>
+            <p class="hero-desc">
+              B.E. Computer Science student with CGPA 8.9, building scalable web apps with Python, React &amp; MySQL. Passionate about clean code, RESTful APIs, and modern UI/UX.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+                View Projects
+              </a>
+              <a href="https://github.com/Nandhakumar-cyber" target="_blank" rel="noreferrer" class="btn btn-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                GitHub
+              </a>
+              <a href="https://linkedin.com/in/nandhakumar-b7a0812a5" target="_blank" rel="noreferrer" class="btn btn-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+            </div>
+
+            <!-- Skill Chips -->
+            <div class="skill-chips">
+              <span class="chip">Python</span>
+              <span class="chip">React</span>
+              <span class="chip">MySQL</span>
+              <span class="chip">REST API</span>
+              <span class="chip">Django</span>
+              <span class="chip">Flask</span>
+            </div>
+          </div>
+
+          <!-- Right: Profile Photo -->
+          <div class="hero-visual">
+            <div class="profile-frame">
+              <div class="profile-glow"></div>
+              <div class="profile-ring">
+                <img src="pokecutweb_1793371880162.jpg" alt="Nandha Kumar - Full Stack Developer" class="profile-photo" />
+              </div>
+              <div class="profile-badge profile-badge-cgpa">
+                <span class="badge-val">8.9</span>
+                <span class="badge-lbl">CGPA</span>
+              </div>
+              <div class="profile-badge profile-badge-stack">
+                <span class="badge-val">Full</span>
+                <span class="badge-lbl">Stack</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- Scrolling Tech Ribbon -->
+    <div class="ribbon-wrap" aria-hidden="true">
+      <div class="ribbon ribbon-primary">
+        <div class="ribbon-track">
+          &nbsp;PYTHON &nbsp;&#183;&nbsp; REACT &nbsp;&#183;&nbsp; MYSQL &nbsp;&#183;&nbsp; REST API &nbsp;&#183;&nbsp; JAVASCRIPT &nbsp;&#183;&nbsp; DJANGO &nbsp;&#183;&nbsp; GIT &nbsp;&#183;&nbsp; FLASK &nbsp;&#183;&nbsp; JWT &nbsp;&#183;&nbsp; REDUX &nbsp;&#183;&nbsp; BOOTSTRAP &nbsp;&#183;&nbsp; POSTMAN &nbsp;&#183;&nbsp; AGILE &nbsp;&#183;&nbsp;
+          &nbsp;PYTHON &nbsp;&#183;&nbsp; REACT &nbsp;&#183;&nbsp; MYSQL &nbsp;&#183;&nbsp; REST API &nbsp;&#183;&nbsp; JAVASCRIPT &nbsp;&#183;&nbsp; DJANGO &nbsp;&#183;&nbsp; GIT &nbsp;&#183;&nbsp; FLASK &nbsp;&#183;&nbsp; JWT &nbsp;&#183;&nbsp; REDUX &nbsp;&#183;&nbsp; BOOTSTRAP &nbsp;&#183;&nbsp; POSTMAN &nbsp;&#183;&nbsp; AGILE &nbsp;&#183;&nbsp;
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">&#127891;</div>
+            <div class="stat-num">8.9</div>
+            <div class="stat-label">CGPA / 10 in B.E. CSE</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">&#128640;</div>
+            <div class="stat-num">2</div>
+            <div class="stat-label">Live Deployed Projects</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">&#9000;</div>
+            <div class="stat-num">10<span class="stat-plus">+</span></div>
+            <div class="stat-label">Terminal Commands Built</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon">&#128451;</div>
+            <div class="stat-num">5</div>
+            <div class="stat-label">Relational DB Tables Designed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Who I Am</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-layout">
+          <div class="about-photo-col">
+            <div class="about-photo-wrap">
+              <img src="pokecutweb_1793371880162.jpg" alt="Nandha Kumar" class="about-photo" />
+              <div class="about-photo-overlay">
+                <div class="about-info-chip">
+                  Greater Coimbatore, India
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-text-col">
+            <p class="about-lead">
+              I build full-stack web apps with clean, maintainable code and care about the details.
+            </p>
+            <p class="about-text">
+              I am a full stack developer with a strong foundation in Python, React, and MySQL, gained through academic projects and hands-on practice building enterprise-grade web applications. I develop RESTful APIs, integrate third-party APIs, and design responsive interfaces using modern UI/UX principles.
+            </p>
+            <p class="about-text">
+              I care about database design and optimization, unit and integration tests, and clean, maintainable code. I am comfortable with Git, and I want to work in Agile teams alongside Business Analysts, UI/UX Designers, and Product Managers. I learn quickly and I am especially interested in CI/CD, debugging, and building scalable, secure applications.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">&#10003;</span>
+                <span>RESTful API Design</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">&#10003;</span>
+                <span>Agile Methodology</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">&#10003;</span>
+                <span>Database Optimization</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">&#10003;</span>
+                <span>Responsive UI/UX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What I Know</span>
+          <h2 class="section-title">Skills &amp; Technologies</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon-wrap">&#128187;</div>
+            <div class="skill-category">Languages</div>
+            <ul class="skill-list">
+              <li class="skill-item">Python</li>
+              <li class="skill-item">JavaScript</li>
+              <li class="skill-item">HTML / CSS</li>
+              <li class="skill-item">SQL</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-wrap">&#127912;</div>
+            <div class="skill-category">Frontend</div>
+            <ul class="skill-list">
+              <li class="skill-item">React.js</li>
+              <li class="skill-item">Redux</li>
+              <li class="skill-item">JSX</li>
+              <li class="skill-item">Bootstrap</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-wrap">&#9881;</div>
+            <div class="skill-category">Backend</div>
+            <ul class="skill-list">
+              <li class="skill-item">Django &amp; Flask</li>
+              <li class="skill-item">RESTful APIs</li>
+              <li class="skill-item">API Integration</li>
+              <li class="skill-item">JWT Authentication</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-wrap">&#128451;</div>
+            <div class="skill-category">Database</div>
+            <ul class="skill-list">
+              <li class="skill-item">MySQL</li>
+              <li class="skill-item">Database Design</li>
+              <li class="skill-item">Query Optimization</li>
+              <li class="skill-item">Schema Design</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-wrap">&#129514;</div>
+            <div class="skill-category">Testing &amp; Quality</div>
+            <ul class="skill-list">
+              <li class="skill-item">Unit Testing</li>
+              <li class="skill-item">Integration Testing</li>
+              <li class="skill-item">Debugging</li>
+              <li class="skill-item">Code Reviews</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon-wrap">&#128296;</div>
+            <div class="skill-category">Tools &amp; Practices</div>
+            <ul class="skill-list">
+              <li class="skill-item">Git &amp; GitHub</li>
+              <li class="skill-item">Agile Methodology</li>
+              <li class="skill-item">Postman</li>
+              <li class="skill-item">VS Code</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What I've Built</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-top">
+              <div class="project-num">01</div>
+              <div class="project-links">
+                <a href="https://github.com/Nandhakumar-cyber" target="_blank" rel="noreferrer" class="project-link-icon" aria-label="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Terminal-Style Portfolio Website</h3>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">React</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Flask</span>
+            </div>
+            <p class="project-desc">
+              An interactive command-line-style portfolio built with React, with a Flask backend that serves project and skills data from a MySQL database through RESTful APIs.
+            </p>
+            <ul class="project-bullets">
+              <li>Custom command parser supporting 10+ navigable commands</li>
+              <li>Deployed live on Render, with dynamic content served from REST endpoints</li>
+            </ul>
+            <div class="project-deployed">
+              <span class="deploy-dot"></span>
+              Deployed on Render
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-top">
+              <div class="project-num">02</div>
+              <div class="project-links">
+                <a href="https://github.com/Nandhakumar-cyber" target="_blank" rel="noreferrer" class="project-link-icon" aria-label="GitHub">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Instagram Clone</h3>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">React</span>
+              <span class="tag">SQL</span>
+              <span class="tag">JWT</span>
+              <span class="tag">Django</span>
+            </div>
+            <p class="project-desc">
+              A full-stack social media application with user authentication, image posting, likes, comments, and follow/unfollow functionality.
+            </p>
+            <ul class="project-bullets">
+              <li>Normalized MySQL schema with 5 relational tables for posts, likes, comments, and follows</li>
+              <li>RESTful APIs in Python secured with JWT authentication</li>
+              <li>Responsive React frontend with dynamic feed and optimistic UI updates</li>
+              <li>Live demo deployed on Vercel (frontend) and Render (backend)</li>
+            </ul>
+            <div class="project-deployed">
+              <span class="deploy-dot"></span>
+              Deployed on Vercel &amp; Render
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Terminal -->
+    <section class="terminal-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Try It Out</span>
+          <h2 class="section-title">Interactive Terminal</h2>
+        </div>
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <div class="terminal-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <div class="terminal-title">nandha@portfolio ~ bash</div>
+            <div class="terminal-tabs">
+              <button class="term-btn" onclick="runCommand('about')" id="tabAbout">about</button>
+              <button class="term-btn" onclick="runCommand('skills')" id="tabSkills">skills</button>
+              <button class="term-btn" onclick="runCommand('projects')" id="tabProjects">projects</button>
+              <button class="term-btn" onclick="runCommand('education')" id="tabEducation">education</button>
+              <button class="term-btn" onclick="runCommand('contact')" id="tabContact">contact</button>
+            </div>
+          </div>
+          <div class="terminal-body" id="termOutput">
+            <div class="term-line"><span class="prompt">nandha@portfolio</span><span class="prompt-path"> ~/dev</span> $ <span class="term-cmd">help</span></div>
+            <div class="term-out">Available commands: about, skills, projects, education, contact, clear</div>
+          </div>
+          <div class="terminal-input-wrapper">
+            <span class="prompt">$</span>
+            <input type="text" id="termInput" class="terminal-input" placeholder="type a command (e.g. about, skills)..." autocomplete="off" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">My Journey</span>
+          <h2 class="section-title">Education</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <div class="timeline-role">RVS College of Engineering and Technology</div>
+                  <div class="timeline-sub">Bachelor of Engineering (B.E.), Computer Science and Engineering</div>
+                </div>
+                <span class="timeline-date">2023 – 2027</span>
+              </div>
+              <div class="timeline-cgpa">
+                <span class="cgpa-badge">CGPA: 8.9 / 10</span>
+                <span class="progress-label">In Progress</span>
+              </div>
+              <div class="cgpa-bar-wrap">
+                <div class="cgpa-bar"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training & Certifications -->
+    <section id="training" class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Continuous Learning</span>
+          <h2 class="section-title">Training &amp; Certifications</h2>
+        </div>
+        <div class="training-grid">
+          <div class="training-card">
+            <div class="training-icon-wrap">&#127979;</div>
+            <div class="training-info">
+              <div class="training-org">Code Purple Academy</div>
+              <p class="training-desc">Trained in Python, React, MySQL and RESTful API development.</p>
+            </div>
+            <div class="training-badge">Training</div>
+          </div>
+          <div class="training-card">
+            <div class="training-icon-wrap">&#127970;</div>
+            <div class="training-info">
+              <div class="training-org">HCL-GUVI</div>
+              <p class="training-desc">Hands-on practical training in Python programming.</p>
+            </div>
+            <div class="training-badge">Training</div>
+          </div>
+          <div class="training-card">
+            <div class="training-icon-wrap">&#128220;</div>
+            <div class="training-info">
+              <div class="training-org">Intro to Programming Using Python</div>
+              <p class="training-desc">Verified foundational knowledge and practical programming exercises.</p>
+            </div>
+            <div class="training-badge cert">Certified</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+        </div>
+        <p class="contact-intro">
+          Eager to contribute to Agile teams and build scalable, secure applications. I'm open to internship and full-time opportunities.
+        </p>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon-wrap">&#128231;</div>
+            <div>
+              <div class="contact-info-title">Email</div>
+              <div class="contact-val">nandhakumar20062008@gmail.com</div>
+            </div>
+            <button class="copy-btn" id="copyEmail" onclick="copyText('nandhakumar20062008@gmail.com', this)">Copy</button>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrap">&#128241;</div>
+            <div>
+              <div class="contact-info-title">Mobile</div>
+              <div class="contact-val">+91 6381918145</div>
+            </div>
+            <button class="copy-btn" id="copyPhone" onclick="copyText('6381918145', this)">Copy</button>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrap">&#128188;</div>
+            <div>
+              <div class="contact-info-title">LinkedIn</div>
+              <div class="contact-val">linkedin.com/in/nandhakumar-b7a0812a5</div>
+            </div>
+            <button class="copy-btn" id="copyLinkedIn" onclick="copyText('https://linkedin.com/in/nandhakumar-b7a0812a5', this)">Copy</button>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon-wrap">&#128008;</div>
+            <div>
+              <div class="contact-info-title">GitHub</div>
+              <div class="contact-val">github.com/Nandhakumar-cyber</div>
+            </div>
+            <button class="copy-btn" id="copyGitHub" onclick="copyText('https://github.com/Nandhakumar-cyber', this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-badge-footer">NK</span>
+          <span>Nandha Kumar</span>
+        </div>
+        <p class="footer-text">Greater Coimbatore Area &middot; B.E. CSE Class of 2027 &middot; Full Stack Developer</p>
+        <div class="footer-links">
+          <a href="https://github.com/Nandhakumar-cyber" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/nandhakumar-b7a0812a5" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="mailto:nandhakumar20062008@gmail.com">Email</a>
+        </div>
+        <p class="footer-copy">&#169; 2024 Nandha Kumar. Built with passion &#128640;</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
